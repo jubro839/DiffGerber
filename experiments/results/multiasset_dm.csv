@@ -1,0 +1,11 @@
+universe,method,vs,dm,p
+ma9,tglobal,gerber_c0.5,-3.317,0.00123
+ma9,tglobal,ledoit_wolf,-1.021,0.3092
+ma9,tglobal,ans,-1.258,0.21096
+ma9,tglobal,equal_weight,-3.288,0.00134
+ma9,gerber_c0.5,equal_weight,-3.277,0.00139
+ma12,tglobal,gerber_c0.5,-4.738,1e-05
+ma12,tglobal,ledoit_wolf,-1.219,0.22548
+ma12,tglobal,ans,1.237,0.21856
+ma12,tglobal,equal_weight,-3.9,0.00016
+ma12,gerber_c0.5,equal_weight,-3.843,0.0002

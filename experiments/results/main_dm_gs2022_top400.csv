@@ -1,0 +1,9 @@
+method,vs,dm,p
+diffgerber_tglobal,gerber_gs2022_c0.5,-0.997,0.32096
+diffgerber_tglobal,ledoit_wolf,-0.722,0.47191
+diffgerber_tasset,gerber_gs2022_c0.5,0.204,0.8389
+diffgerber_tasset,ledoit_wolf,0.231,0.81774
+diffgerber_tasym,gerber_gs2022_c0.5,-0.397,0.69206
+diffgerber_tasym,ledoit_wolf,0.018,0.9859
+diffgerber_tstate,gerber_gs2022_c0.5,0.268,0.78908
+diffgerber_tstate,ledoit_wolf,0.293,0.76998

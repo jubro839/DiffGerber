@@ -1,0 +1,5 @@
+variant,mean_seconds_per_refit
+A_ste,9.37
+B_soft,9.23
+D_finite_diff,5.23
+E_numonly,7.97

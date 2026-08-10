@@ -1,0 +1,7 @@
+universe,variant,forward,backward,deployed,c_mean_2019plus,c_final,ann_ret_net,ann_vol_net,sharpe_net,sortino_net,max_drawdown,avg_turnover
+top100,A_ste_hard,hard,surrogate,hard,1.087,0.9941,0.07504,0.13763,0.54527,0.76636,-0.28751,0.76033
+top100,E_num_only,hard,surr-num,hard,1.397,1.2257,0.07432,0.1401,0.53046,0.74514,-0.29699,0.73919
+top100,B_soft_soft,soft,surrogate,soft,1.4563,1.639,0.07364,0.13947,0.52803,0.74323,-0.28989,0.73446
+top100,C_soft_deployhard,soft,surrogate,hard,1.4563,1.639,0.07134,0.14006,0.50933,0.71574,-0.29466,0.73964
+top100,D_finite_diff,hard,finite,hard,0.9914,0.9848,0.07232,0.13716,0.52729,0.73899,-0.28512,0.76779
+top100,FD_zero_gradient_rate,hard,finite,-,0.0,400.0,,,,,,

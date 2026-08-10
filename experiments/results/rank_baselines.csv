@@ -1,0 +1,17 @@
+universe,eval_from,method,ann_vol_net,sharpe_net,n_folds
+top100,2017,learned,0.13758,0.54,114
+top100,2017,gerber_c0.5,0.14041,0.437,114
+top100,2017,ledoit_wolf,0.14622,0.426,114
+top100,2017,ans,0.14266,0.508,114
+top100,2017,spearman,0.17394,0.252,114
+top100,2017,kendall,0.64373,0.185,114
+top100,2017,spearman_shrunk,0.14345,0.439,114
+top100,2017,kendall_shrunk,0.14484,0.42,114
+top400,2017,learned,0.1276,0.542,114
+top400,2017,gerber_c0.5,0.13271,0.551,114
+top400,2017,ledoit_wolf,0.13177,0.402,114
+top400,2017,ans,0.1254,0.595,114
+top400,2017,spearman,0.20021,0.115,114
+top400,2017,kendall,0.18496,0.075,114
+top400,2017,spearman_shrunk,0.13517,0.44,114
+top400,2017,kendall_shrunk,0.13513,0.451,114

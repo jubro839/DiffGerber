@@ -1,0 +1,3 @@
+N,winner,cells_won,sharpe_net,cells_lost
+30,BL_LEARN,15,0.71547,ledoit_wolf:max_drawdown;ans:max_drawdown;hrp:ann_ret_net;hrp:sharpe_net;hrp:sortino_net
+50,BL0.5_ward,15,0.56409,ledoit_wolf:max_drawdown;ans:max_drawdown;hrp:ann_ret_net;hrp:sharpe_net;hrp:sortino_net

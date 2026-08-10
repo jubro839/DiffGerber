@@ -1,0 +1,7 @@
+universe,method,vs,dm,p
+mix30,tasym,gerber_c0.5,-2.095,0.03841
+mix30,hrp_gerber,gerber_c0.5,4.385,3e-05
+mix30,hrp_gerber,hrp,1.047,0.29746
+mix70,tasym,gerber_c0.5,-1.227,0.22236
+mix70,hrp_gerber,gerber_c0.5,4.015,0.00011
+mix70,hrp_gerber,hrp,0.729,0.46767

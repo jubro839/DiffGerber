@@ -1,0 +1,10 @@
+N,method,vs,dm,p
+20,DG-GMV,equal_weight,-5.434,0.0
+20,DG-Asym,equal_weight,-4.684,1e-05
+20,DG-HRP,equal_weight,-5.31,0.0
+40,DG-GMV,equal_weight,-3.763,0.00027
+40,DG-Asym,equal_weight,-3.713,0.00032
+40,DG-HRP,equal_weight,-4.844,0.0
+70,DG-GMV,equal_weight,-3.051,0.00284
+70,DG-Asym,equal_weight,-3.08,0.0026
+70,DG-HRP,equal_weight,-4.18,6e-05

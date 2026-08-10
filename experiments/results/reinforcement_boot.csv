@@ -1,0 +1,5 @@
+universe,stat,observed,ci_lo,ci_hi,p_onesided
+top100,dSharpe,0.0286,-0.0076,0.0686,0.0685
+top100,dSortino,0.0404,-0.0116,0.0984,0.0735
+sector30,dSharpe,0.0215,-0.0212,0.0681,0.172
+sector30,dSortino,0.0322,-0.0297,0.0979,0.163

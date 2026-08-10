@@ -1,0 +1,2 @@
+method,delta_mean,delta_min,delta_max,ann_ret_net,ann_vol_net,sharpe_net,sortino_net,max_drawdown,avg_turnover
+analytic_delta,0.2652,0.0795,1.0,0.06533,0.14185,0.46057,0.64244,-0.28489,1.3938

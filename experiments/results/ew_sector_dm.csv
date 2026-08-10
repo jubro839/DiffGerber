@@ -1,0 +1,13 @@
+N,method,vs,dm,p
+30,DG-GMV,equal_weight,-3.787,0.00025
+30,DG-Asym,equal_weight,-3.741,0.00029
+30,DG-HRP,equal_weight,-4.595,1e-05
+30,DG-Shrink,equal_weight,-3.555,0.00055
+50,DG-GMV,equal_weight,-3.147,0.00211
+50,DG-Asym,equal_weight,-2.99,0.00342
+50,DG-HRP,equal_weight,-4.232,5e-05
+50,DG-Shrink,equal_weight,-3.089,0.00253
+100,DG-GMV,equal_weight,-4.171,6e-05
+100,DG-Asym,equal_weight,-3.27,0.00142
+100,DG-HRP,equal_weight,-4.1,8e-05
+100,DG-Shrink,equal_weight,-3.308,0.00126

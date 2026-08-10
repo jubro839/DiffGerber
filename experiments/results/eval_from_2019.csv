@@ -1,0 +1,9 @@
+universe,eval_from,method,ann_vol_net,sharpe_net,n_folds
+top100,2019,learned,0.14628,0.575,90
+top100,2019,gerber_c0.5,0.14983,0.443,90
+top100,2019,ledoit_wolf,0.15659,0.407,90
+top100,2019,ans,0.15249,0.507,90
+top400,2019,learned,0.136,0.569,90
+top400,2019,gerber_c0.5,0.1421,0.556,90
+top400,2019,ledoit_wolf,0.14035,0.378,90
+top400,2019,ans,0.13367,0.603,90

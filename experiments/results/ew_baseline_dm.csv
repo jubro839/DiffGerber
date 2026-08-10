@@ -1,0 +1,9 @@
+universe,method,vs,dm,p
+top100,DG-GMV,equal_weight,-3.92,0.00015
+top100,DG-Asym,equal_weight,-3.982,0.00012
+top100,DG-HRP,equal_weight,-5.34,0.0
+top100,DG-Shrink,equal_weight,-3.419,0.00087
+top400,DG-GMV,equal_weight,-2.76,0.00675
+top400,DG-Asym,equal_weight,-2.678,0.00851
+top400,DG-HRP,equal_weight,-3.898,0.00016
+top400,DG-Shrink,equal_weight,-2.865,0.00497

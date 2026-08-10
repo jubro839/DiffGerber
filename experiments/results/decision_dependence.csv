@@ -1,0 +1,4 @@
+method,ann_vol_net,sharpe_net,mdd,turnover
+lo_learned,0.14996,0.529,-0.3282,0.221
+lo_fixed0.5,0.14838,0.578,-0.3282,0.236
+lo_from_longshort,0.14943,0.57,-0.3154,0.223

@@ -1,0 +1,20 @@
+name: diffgerber
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      # versions used to produce the results in experiments/results/
+      - torch==2.13.0
+      - pandas==2.3.3
+      - numpy==2.4.4
+      - scipy==1.17.1
+      - scikit-learn==1.8.0
+      - matplotlib==3.10.9
+      # only needed for the long-only decision layer (Section 6.5) and for
+      # loading prices from a warehouse; the rest of the code runs without them
+      - cvxpylayers==0.1.6
+      - psycopg[binary]==3.2.3
+      - python-dotenv==1.0.1
+      - pyarrow==18.1.0

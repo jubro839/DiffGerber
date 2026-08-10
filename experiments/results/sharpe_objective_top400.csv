@@ -1,0 +1,4 @@
+universe,method,ann_vol_net,sharpe_net,mdd
+top400,sharpe_trained,0.13348,0.505,-0.3337
+top400,variance_trained,0.1276,0.542,-0.3222
+top400,fixed_0.5,0.13271,0.551,-0.3344
