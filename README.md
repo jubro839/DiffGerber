@@ -1,8 +1,8 @@
-# DiffGerber: Decision-Focused Learning of the Gerber Threshold
+# Decision-Focused Learning of the Gerber Threshold
 
-Official code and result files for the paper:
+Official code and result files for **DiffGerber**, the method introduced in
+the paper of the same title:
 
-> **Decision-Focused Learning of the Gerber Threshold**<br>
 > Juyeong Lee, Donghwa Seo, Minjae Lee, Seunghan Son, Minsuk Sung, Doohwi Cha, Yoontae Hwang<br>
 > *7th ACM International Conference on AI in Finance (ICAIF '26)*, November 14–17, 2026, Milan, Italy
 

@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite the paper below."
-title: "DiffGerber: Decision-Focused Learning of the Gerber Threshold"
+title: "Decision-Focused Learning of the Gerber Threshold"
 type: software
 license: MIT
 repository-code: "https://github.com/jubro839/DiffGerber"
