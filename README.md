@@ -74,53 +74,54 @@ Two obstacles stand between this estimator and gradient-based learning:
 
 ```mermaid
 flowchart LR
-    R["returns window<br/>252 days"] --> Z["standardize<br/>z = r / σ"]
-    Z --> G["hard Gerber statistic<br/>G(c)"]
+    R["returns<br/>252-day window"] --> G["hard Gerber<br/>statistic G(c)"]
     G --> S["covariance<br/>Σ = D G D"]
-    S --> W["GMV layer<br/>w(Σ)"]
+    S --> W["GMV weights<br/>w(Σ)"]
     W --> L["realized variance<br/>next 21 days"]
-    L -. "backward pass only:<br/>tempered three-state surrogate" .-> C(("threshold c"))
-    C --> G
+    L -. "gradient for c through the three-state surrogate" .-> G
 ```
 
-1. **Hard forward pass.** The Gerber matrix that reaches the portfolio layer is
-   always the hard statistic, scaled by fixed volatilities. In the base model
-   (DG-GMV) the threshold is the only learned parameter. DG-Shrink and DG-Group
-   also learn a blend intensity $`\delta`$ and pass
-   $`\delta\, D G D + (1-\delta)\, S`$ to the portfolio layer, where $`S`$ is the
-   sample covariance.
-2. **Surrogate backward pass.** A tempered softmax over the three states, with
-   logits $`\big((z-c)/\tau,\ (-z-c)/\tau,\ 0\big)`$, gives soft versions
-   $`m^{\mathrm{s}}`$ and $`\nu^{\mathrm{s}}`$ of the signed and neutral states. A
-   straight-through construction keeps the hard value and borrows the soft
-   derivative (sg is stop-gradient):
+**1. Hard forward pass.** The Gerber matrix that reaches the portfolio layer is
+always the hard statistic, scaled by fixed volatilities. In the base model
+(DG-GMV) the threshold is the only learned parameter. DG-Shrink and DG-Group
+also learn a blend intensity $`\delta`$ and pass
+$`\delta\, D G D + (1-\delta)\, S`$ to the portfolio layer, where $`S`$ is the
+sample covariance.
 
-   ```math
-   \tilde m = m^{\mathrm{s}} + \mathrm{sg}\big(m^{\mathrm{h}} - m^{\mathrm{s}}\big),
-   \qquad
-   \tilde \nu = \nu^{\mathrm{s}} + \mathrm{sg}\big(\nu^{\mathrm{h}} - \nu^{\mathrm{s}}\big)
-   ```
+**2. Surrogate backward pass.** A tempered softmax over the three states, with
+logits $`\big((z-c)/\tau,\ (-z-c)/\tau,\ 0\big)`$, gives soft versions
+$`m^{\mathrm{s}}`$ and $`\nu^{\mathrm{s}}`$ of the signed and neutral states. A
+straight-through construction keeps the hard value and borrows the soft
+derivative (sg is stop-gradient):
 
-3. **Quotient-complete gradient.** Raising the threshold changes both the
-   signed co-movement numerator *and* the pairwise-activity denominator, and
-   the two effects can oppose each other. DiffGerber differentiates both.
-   Dropping the denominator path — the "numerator-only" ablation below — sends
-   the optimizer to a different, worse threshold.
-4. **Decision sensitivity.** The gradient continues through the closed-form GMV
-   solution
+```math
+\tilde m = m^{\mathrm{s}} + \mathrm{sg}\big(m^{\mathrm{h}} - m^{\mathrm{s}}\big),
+\qquad
+\tilde \nu = \nu^{\mathrm{s}} + \mathrm{sg}\big(\nu^{\mathrm{h}} - \nu^{\mathrm{s}}\big)
+```
 
-   ```math
-   w(\Sigma) =
-   \frac{(\Sigma + \rho \bar{s} I)^{-1} \mathbf{1}}
-        {\mathbf{1}^{\top} (\Sigma + \rho \bar{s} I)^{-1} \mathbf{1}},
-   \qquad \bar{s} = \tfrac{1}{N} \operatorname{tr} \Sigma
-   ```
+**3. Quotient-complete gradient.** Raising the threshold changes both the
+signed co-movement numerator *and* the pairwise-activity denominator, and the
+two effects can oppose each other. DiffGerber differentiates both. Dropping
+the denominator path — the "numerator-only" ablation below — sends the
+optimizer to a different, worse threshold.
 
-   to the realized variance of the portfolio over the following 21 trading
-   days, measured as the mean squared daily portfolio return. The same scale-relative ridge $`\rho = 10^{-3}`$ is used in training and
-   in evaluation.
-5. **Annual expanding refits.** For each deployment year, parameters are refit
-   only on episodes whose full outcome window ends before that year begins.
+**4. Decision sensitivity.** The gradient continues through the closed-form GMV
+solution
+
+```math
+w(\Sigma) =
+\frac{(\Sigma + \rho \bar{s} I)^{-1} \mathbf{1}}
+     {\mathbf{1}^{\top} (\Sigma + \rho \bar{s} I)^{-1} \mathbf{1}},
+\qquad \bar{s} = \tfrac{1}{N} \operatorname{tr} \Sigma
+```
+
+to the realized variance of the portfolio over the following 21 trading days,
+measured as the mean squared daily portfolio return. The same scale-relative
+ridge $`\rho = 10^{-3}`$ is used in training and in evaluation.
+
+**5. Annual expanding refits.** For each deployment year, parameters are refit
+only on episodes whose full outcome window ends before that year begins.
 
 The model family, in the paper's names:
 
