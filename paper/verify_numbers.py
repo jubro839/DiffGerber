@@ -25,7 +25,7 @@ import pandas as pd
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 RES = ROOT / "experiments" / "results"
 HERE = pathlib.Path(__file__).resolve().parent
-# The manuscript source is not part of the anonymous code release, so the
+# The manuscript source is not part of the code release, so the
 # hygiene section at the bottom runs only when main.tex sits next to us.
 _tex, _bib = HERE / "main.tex", HERE / "refs.bib"
 TEX = _tex.read_text() if _tex.exists() else ""
@@ -610,7 +610,7 @@ if TEX:
     claim("no Korean text in the source",
           not re.search(r"[\uac00-\ud7af]", TEX))
     claim("reproducibility URL present",
-          "anonymous.4open.science/r/DiffGerber-ED0B" in TEX)
+          "github.com/jubro839/DiffGerber" in TEX)
     claim("AI-tools disclosure present in the body",
           "Generative AI tools" in TEX)
 

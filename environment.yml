@@ -12,7 +12,7 @@ dependencies:
       - scipy==1.17.1
       - scikit-learn==1.8.0
       - matplotlib==3.10.9
-      # only needed for the long-only decision layer (Section 6.5) and for
+      # only needed for the long-only decision layer and for
       # loading prices from a warehouse; the rest of the code runs without them
       - cvxpylayers==0.1.6
       - psycopg[binary]==3.2.3

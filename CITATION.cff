@@ -1,0 +1,63 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the paper below."
+title: "DiffGerber: Decision-Focused Learning of the Gerber Threshold"
+type: software
+license: MIT
+repository-code: "https://github.com/jubro839/DiffGerber"
+authors:
+  - family-names: Lee
+    given-names: Juyeong
+    affiliation: EY Consulting
+    orcid: "https://orcid.org/0000-0002-4619-925X"
+  - family-names: Seo
+    given-names: Donghwa
+    affiliation: DS Investment & Securities
+    orcid: "https://orcid.org/0009-0003-5718-1535"
+  - family-names: Lee
+    given-names: Minjae
+    affiliation: Independent Researcher
+    orcid: "https://orcid.org/0000-0002-8937-9605"
+  - family-names: Son
+    given-names: Seunghan
+    affiliation: Independent Researcher
+    orcid: "https://orcid.org/0009-0000-2902-9999"
+  - family-names: Sung
+    given-names: Minsuk
+    affiliation: Korea University
+    orcid: "https://orcid.org/0009-0007-2282-6873"
+  - family-names: Cha
+    given-names: Doohwi
+    affiliation: Mirae Asset Securities
+    orcid: "https://orcid.org/0009-0000-2513-6965"
+  - family-names: Hwang
+    given-names: Yoontae
+    affiliation: Pusan National University
+    orcid: "https://orcid.org/0000-0002-5856-1914"
+preferred-citation:
+  type: conference-paper
+  title: "Decision-Focused Learning of the Gerber Threshold"
+  authors:
+    - family-names: Lee
+      given-names: Juyeong
+    - family-names: Seo
+      given-names: Donghwa
+    - family-names: Lee
+      given-names: Minjae
+    - family-names: Son
+      given-names: Seunghan
+    - family-names: Sung
+      given-names: Minsuk
+    - family-names: Cha
+      given-names: Doohwi
+    - family-names: Hwang
+      given-names: Yoontae
+  collection-title: "Proceedings of the 7th ACM International Conference on AI in Finance (ICAIF '26)"
+  conference:
+    name: "7th ACM International Conference on AI in Finance (ICAIF '26)"
+    city: Milan
+    country: IT
+    date-start: "2026-11-14"
+    date-end: "2026-11-17"
+  publisher:
+    name: ACM
+  year: 2026
