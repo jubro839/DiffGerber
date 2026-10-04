@@ -113,7 +113,7 @@ solution
 w(\Sigma) =
 \frac{(\Sigma + \rho \bar{s} I)^{-1} \mathbf{1}}
      {\mathbf{1}^{\top} (\Sigma + \rho \bar{s} I)^{-1} \mathbf{1}},
-\qquad \bar{s} = \tfrac{1}{N} \operatorname{tr} \Sigma
+\qquad \bar{s} = \tfrac{1}{N} \mathrm{tr}\, \Sigma
 ```
 
 to the realized variance of the portfolio over the following 21 trading days,
